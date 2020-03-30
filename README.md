@@ -9,3 +9,7 @@ Cloud computing
 ## hadoop用户配置
 添加无密码sudo权限
 （以防万一）统一密码comp5349
+
+## 关闭防火墙
+  systemctl stop firewalld
+  sytemctl disable firewalld
