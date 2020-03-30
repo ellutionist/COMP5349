@@ -12,4 +12,4 @@ Cloud computing
 
 ## 关闭防火墙
     systemctl stop firewalld
-    sytemctl disable firewalld
+    systemctl disable firewalld
