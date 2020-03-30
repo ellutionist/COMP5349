@@ -34,8 +34,8 @@ Cloud computing
 ### 移动
     sudo mv ~/Downloads/scala-2.11.12 /usr/lib/jvm/scala-2.11.12
 
-# Hadoop
-### 统一版本：2.7.7
+## Hadoop
+### 统一版本：2.7.7（配合Spark2.4.5）
 
 ### 下载
     cd ~/Downloads && wget http://apache.mirror.amaze.com.au/hadoop/common/hadoop-2.7.7/hadoop-2.7.7.tar.gz
@@ -47,16 +47,27 @@ Cloud computing
 ### 移动
     mkdir -p ~/opt/module
     mv ~/Downloads/hadoop-2.7.7 ~/opt/module/hadoop-2.7.7
-    
+
+## Spark
+### 统一版本：2.4.5（配合Hadoop2.7）
+### 下载
+    cd ~/Downloads && wget http://apache.mirror.amaze.com.au/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
+### 解压
+    tar -xf spark-2.4.5-bin-hadoop2.7.tgz
+### 移动
+    mv ~/Downloads/spark-2.4.5-bin-hadoop2.7 ~/opt/module/spark-2.4.5-bin-hadoop2.7
 
 ## 环境变量
 编辑profile文件
     
     sudo vi /etc/profile
 
-添加
+添加(此处待补充）
 
     export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64
+    export SCALA_HOME=/usr/lib/jvm/scala-2.11.12
+    export HADOOP_HOME=/home/hadoop/opt/module/hadoop-2.7.7
+    export SPARK_HOME=/home/hadoop/opt/module/spark-2.4.5-bin-hadoop2.7
 
 重载
 
