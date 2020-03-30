@@ -13,3 +13,27 @@ Cloud computing
 ## 关闭防火墙
     systemctl stop firewalld
     systemctl disable firewalld
+
+## JAVA
+### 统一版本：jdk8u242
+
+安装
+
+    sudo yum install java-1.8.0-openjdk-devel.x86_64
+
+# Hadoop
+### 统一版本：
+
+## 环境变量
+编辑profile文件
+    
+    sudo vi /etc/profile
+
+添加
+
+    export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64
+
+重载
+
+    source /etc/profile
+    
