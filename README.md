@@ -11,18 +11,43 @@ Cloud computing
 （以防万一）统一密码comp5349
 
 ## 关闭防火墙
-    systemctl stop firewalld
-    systemctl disable firewalld
+    sudo systemctl stop firewalld
+    sudo systemctl disable firewalld
+## 安装wget
+    sudo yum install wget
 
 ## JAVA
 ### 统一版本：jdk8u242
 
-安装
+### 安装
 
     sudo yum install java-1.8.0-openjdk-devel.x86_64
 
+## SCALA
+### 统一版本：2.11.12（配合Spark2.4.5）
+
+### 下载
+    mkdir ~/Downloads
+    cd ~/Downloads && wget https://downloads.lightbend.com/scala/2.11.12/scala-2.11.12.tgz
+### 解压
+    tar -xf scala-2.11.12.tgz
+### 移动
+    sudo mv ~/Downloads/scala-2.11.12 /usr/lib/jvm/scala-2.11.12
+
 # Hadoop
-### 统一版本：
+### 统一版本：2.7.7
+
+### 下载
+    cd ~/Downloads && wget http://apache.mirror.amaze.com.au/hadoop/common/hadoop-2.7.7/hadoop-2.7.7.tar.gz
+
+### 解压
+    
+    tar -xf hadoop-2.7.7.tar.gz
+
+### 移动
+    mkdir -p ~/opt/module
+    mv ~/Downloads/hadoop-2.7.7 ~/opt/module/hadoop-2.7.7
+    
 
 ## 环境变量
 编辑profile文件
